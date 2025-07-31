@@ -96,10 +96,10 @@ a {
   opacity: 0.05;
 }
 .header .cta-buttons .secondary {
-  background-color: #f6ab78;
+  background-color: #be097f;
   color: #fffffa;
   border: none;
-  background-image: linear-gradient(-180deg, rgb(247.59375, 185.875, 143.90625) 0%, #f6ab78 100%);
+  background-image: linear-gradient(-180deg, rgb(214.3467336683, 10.1532663317, 143.2738693467) 0%, #be097f 100%);
   box-shadow: 0 0.5rem 0.7rem rgba(180, 100, 80, 0.2), 0 -0.15rem 0.6rem rgba(160, 80, 60, 0.3) inset, 0 0.3rem 0.2rem rgba(255, 255, 255, 0.2) inset;
   transition: all 0.15s ease-in-out;
 }
@@ -112,18 +112,24 @@ a {
   flex: 1;
 }
 
-.side-menu {
-  width: 100px;
+.hero-section {
+  background-color: #f6ab78;
+  display: flex;
+  height: 500px;
+  justify-content: space-between;
+}
+.hero-section .side-menu {
+  width: 120px;
   margin-right: 1px;
   background-color: #031837;
   overflow: hidden;
   transition: width 0.3s ease;
   z-index: 1000;
 }
-.side-menu:hover {
-  width: 220px;
+.hero-section .side-menu:hover {
+  width: 340px;
 }
-.side-menu::before {
+.hero-section .side-menu::before {
   content: "Menu";
   display: block;
   color: #f6ab78;
@@ -133,7 +139,7 @@ a {
   font-size: 1.4rem;
   background-color: #031837;
 }
-.side-menu ul {
+.hero-section .side-menu ul {
   list-style: none;
   padding: 2rem 1rem;
   display: flex;
@@ -142,7 +148,7 @@ a {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.side-menu ul li a {
+.hero-section .side-menu ul li a {
   color: #fffffa;
   font-weight: 600;
   white-space: nowrap;
@@ -150,42 +156,37 @@ a {
   text-overflow: ellipsis;
   display: block;
 }
-.side-menu ul li a:hover {
+.hero-section .side-menu ul li a:hover {
   color: #be097f;
 }
-.side-menu:hover ul {
+.hero-section .side-menu:hover ul {
   opacity: 1;
 }
-
-.hero-section {
-  background-color: #f6ab78;
+.hero-section .accroche {
+  background: linear-gradient(to right, #031837 0%, rgb(6.1655172414, 49.324137931, 113.0344827586) 100%);
   display: flex;
-  height: 500px;
-  justify-content: space-between;
 }
-.hero-section .accroche-texte {
-  background-color: #031837;
+.hero-section .accroche .accroche-texte {
   padding: 20px 0 0 100px;
   flex: 1;
 }
-.hero-section .accroche-texte h2 {
+.hero-section .accroche .accroche-texte h2 {
   font-size: 2.6rem;
   margin-bottom: 1rem;
   color: #5bb887;
   margin-bottom: 2rem;
 }
-.hero-section .accroche-texte p {
+.hero-section .accroche .accroche-texte p {
   color: #fffffa;
   width: 40rem;
   font-size: 1.4rem;
   line-height: 3rem;
   font-weight: 100;
 }
-.hero-section .accroche-image {
+.hero-section .accroche .accroche-image {
   flex: 1;
-  background-color: #031837;
 }
-.hero-section .accroche-image img {
+.hero-section .accroche .accroche-image img {
   height: 500px;
   width: auto;
   max-width: 90%;
