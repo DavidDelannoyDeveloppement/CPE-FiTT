@@ -1,7 +1,13 @@
+
+// ========================
+// === IMPORT VARIABLES ===
+// ========================
 @use './variables' as *;
 
 
-// === Reset / Base ===
+// ====================
+// === RESET GLOBAL ===
+// ====================
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +22,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
+
 }
 
 img {
@@ -29,7 +37,10 @@ a {
   color: inherit;
 }
 
-// === Header ===
+
+// ==========================
+// === SECTION : HEADER ====
+// ==========================
 .header {
   color: $bleu;
   display: flex;
@@ -74,7 +85,7 @@ a {
       background-image: linear-gradient(-180deg, lighten($vert1, 10%) 0%, $vert1 100%);
       color: $creme;
       text-align: center;
-      border: none; // ✅ Bordure extérieure supprimée
+      border: none;
       box-shadow:
         0 0.5rem 0.7rem rgba(0, 100, 60, 0.2),
         0 -0.15rem 0.6rem rgba(0, 80, 40, 0.3) inset,
@@ -119,7 +130,7 @@ a {
     .secondary {
     background-color: $violet;
     color: $creme;
-    border: none; // ✅ pour suivre l’apparence du premier bouton
+    border: none;
     background-image: linear-gradient(-180deg, lighten($violet, 5%) 0%, $violet 100%);
     box-shadow:
       0 0.5rem 0.7rem rgba(180, 100, 80, 0.2),
@@ -140,14 +151,13 @@ a {
 }
 
 
-// === Main Content ===
+
+// ==========================
+// ====== MAIN CONTENT ======
+// ==========================
 .main-content {
   flex: 1;
-  // background-color: $creme;
-  // padding: 2rem;
 }
-
-
 
 
 .hero-section {
@@ -156,6 +166,7 @@ a {
   height: 500px;
   justify-content: space-between;
   
+  // ==================
   // === Side Menu ===
   .side-menu {
     width: 120px;
@@ -212,6 +223,8 @@ a {
   .accroche {
     background: linear-gradient(to right, $bleu 0%, lighten($bleu, 12%) 100%);
     display: flex;
+    // overflow-x: hidden;
+
   
     .accroche-texte {
       // background-color: $bleu;
@@ -226,7 +239,8 @@ a {
       }
       p{
         color: $creme;
-        width: 40rem;
+        max-width: 40rem;
+        width: 100%;
         font-size: 1.4rem;
         line-height: 3rem;
         font-weight: 100;
@@ -240,8 +254,8 @@ a {
       img {
         height: 500px;
         width: auto;
-        max-width: 90%;         // ✅ limite l’élargissement
-        min-width: 300px;       // ✅ évite l’écrasement
+        max-width: 90%;
+        min-width: 300px;
         margin-left: 25%;
 
         animation: slideUp 2s ease-out;
@@ -262,204 +276,517 @@ a {
   }
 }
 
-// === VIGNETTES ===
-.vignettes-section {
-  background-color: #031837;
-}
 
-// === ACTUALITÉS ===
-.actus-section {
+
+// ==========================
+// ======= VIGNETTES ========
+// ==========================
+.vignettes-section {
   background-color: $creme;
-  padding: 3rem 2rem;
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+  padding: 4rem 10vw; // padding adaptatif
+  text-align: center;
+
+  .vignettes-title {
+    font-size: 2.6rem;
+    color: $violet;
+    margin-bottom: 2.6rem;
   }
 
-  .actus-container {
+  .vignettes-grid {
     display: flex;
-    gap: 2rem;
     flex-wrap: wrap;
+    justify-content: center; // ✅ centre les vignettes
+    gap: 2rem;
+  }
 
-    .actu-card {
-      background-color: white;
-      border-left: 4px solid $vert1;
-      padding: 1rem;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-      flex: 1;
-      min-width: 250px;
+  .vignette {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: clamp(220px, 25vw, 300px); // ✅ adaptatif
+    height: 180px;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    color: $creme;
+    background: linear-gradient(to left, $vert3 0%, lighten($vert3, 8%) 100%);
+    transition: transform 0.2s ease;
+    box-shadow: 5px 5px 8px $bleu;
+
+    img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      // margin-bottom: 0.8rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+
+    &:hover {
+      box-shadow: inset 4px 4px 8px $bleu;
+      // box-shadow: inset -1px -1px 3px $bleu;
+      // transform: scale(1.03);
     }
   }
 }
 
-// === SIMULATEUR ===
+
+
+
+
+// ==========================
+// ======= SIMULATEUR =======
+// ==========================
 .simulateur-section {
-  background-color: $vert3;
-  padding: 3rem 2rem;
-  color: white;
+  background: linear-gradient(to left, $vert3 0%, lighten($vert3, 12%) 100%);
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
 
   .simulateur-content {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 3rem;
+  }
 
-    .simulateur-image {
-      flex: 1;
+  .simulateur-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 500px;
+      width: auto;
+      max-width: 90%;
+      min-width: 300px;
+      // margin-left: 25%;
+    }
+  }
+
+  .simulateur-texte {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 0;
+
+    h2 {
+      align-items: flex-start;
+      font-size: 2.6rem;
+      margin-bottom: 2rem;
+      color: $creme;
     }
 
-    .simulateur-texte {
-      flex: 1;
-      h2 {
-        margin-bottom: 1rem;
+    p {
+      align-items: flex-start;
+      text-align: justify;
+      color: $bleu;
+      font-size: 1.5rem;
+      line-height: 2.6rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      max-width: 40rem;
+    }
+
+    .btn {
+      align-self: center;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: bold;
+      background-image: linear-gradient(-180deg, lighten($violet, 10%) 0%, $violet 100%);
+      color: $creme;
+      font-size: 1.25rem;
+      text-align: center;
+      border: none;
+      box-shadow:
+        0 0.5rem 0.7rem rgba(0, 100, 60, 0.2),
+        0 -0.15rem 0.6rem rgba(0, 80, 40, 0.3) inset,
+        0 0.3rem 0.2rem rgba(255,255,255, 0.2) inset;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        transform: translateY(3px) scale(0.98);
+        box-shadow:
+          0 0.1rem 0.15rem rgba(0, 60, 40, 0.3),
+          0 -0.1rem 0.6rem rgba(0, 80, 40, 0.4) inset,
+          inset 0 0.2rem 0.3rem rgba(0, 40, 20, 0.3),
+          inset 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
       }
-      .btn {
-        background-color: white;
-        color: $vert1;
-        &:hover {
-          opacity: 0.9;
-        }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 2rem);
+        height: 0.1rem;
+        border-radius: 100%;
+      }
+
+      &::before {
+        top: 0.4rem;
+        background-image: linear-gradient(270deg, rgba(255,255,255,0) 0%, #ffffff 20%, #ffffff 80%, rgba(255,255,255,0) 100%);
+        opacity: 0.5;
+      }
+
+      &::after {
+        bottom: 0.5rem;
+        background-image: linear-gradient(270deg, rgba(255,255,255,0) 0%, #ffffff 20%, #ffffff 80%, rgba(255,255,255,0) 100%);
+        filter: blur(1px);
+        opacity: 0.05;
       }
     }
   }
 }
 
-// === EXPERT CONTACT ===
+
+
+
+
+// ==========================
+// ===== EXPERT CONTACT =====
+// ==========================
 .expert-section {
-  background-color: white;
-  padding: 3rem 2rem;
+  background: $creme;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
 
   .expert-content {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-    .expert-texte {
-      flex: 1;
-      h2 {
-        margin-bottom: 1rem;
-      }
-    }
-
-    .expert-image {
-      flex: 1;
-    }
-  }
-}
-
-
-
-// === Footer ===
-.footer {
-  background-color: $creme;
-  padding: 1.5rem 2rem;
-  text-align: center;
-  color: #031837;
-  position: relative;
-  z-index: 1100;
-
-  .footer-logo img {
-    height: 40px;
-    margin: 1rem 0;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 3rem;
   }
 
-  .cta-footer {
-    margin-top: 1rem;
+  .expert-image {
+    flex: 1;
     display: flex;
     justify-content: center;
-    gap: 1rem;
 
-    .btn {
-      padding: 0.4rem 0.8rem;
-      background-color: $vert1;
-      color: $creme;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      &:hover {
-        opacity: 0.9;
-      }
+    img {
+      height: 500px;
+      width: auto;
+      max-width: 90%;
+      min-width: 300px;
+    }
+  }
+
+  .expert-texte {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 0;
+
+    h2 {
+      font-size: 2.6rem;
+      margin-bottom: 2rem;
+      color: $vert1;
     }
 
-    .secondary {
-      background-color: $vert1;
+    p {
+      color: $bleu;
+      text-align: justify;
+      font-size: 1.5rem;
+      line-height: 2.6rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      max-width: 40rem;
+    }
+
+    .btn {
+      align-self: center;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: bold;
+      background-image: linear-gradient(-180deg, lighten($vert1, 10%) 0%, $vert1 100%);
+      color: $creme;
+      font-size: 1.25rem;
+      text-align: center;
+      border: none;
+      box-shadow:
+        0 0.5rem 0.7rem rgba(0, 100, 60, 0.2),
+        0 -0.15rem 0.6rem rgba(0, 80, 40, 0.3) inset,
+        0 0.3rem 0.2rem rgba(255,255,255, 0.2) inset;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        transform: translateY(3px) scale(0.98);
+        box-shadow:
+          0 0.1rem 0.15rem rgba(0, 60, 40, 0.3),
+          0 -0.1rem 0.6rem rgba(0, 80, 40, 0.4) inset,
+          inset 0 0.2rem 0.3rem rgba(0, 40, 20, 0.3),
+          inset 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 2rem);
+        height: 0.1rem;
+        border-radius: 100%;
+      }
+
+      &::before {
+        top: 0.4rem;
+        background-image: linear-gradient(270deg, rgba(255,255,255,0) 0%, #ffffff 20%, #ffffff 80%, rgba(255,255,255,0) 100%);
+        opacity: 0.5;
+      }
+
+      &::after {
+        bottom: 0.5rem;
+        background-image: linear-gradient(270deg, rgba(255,255,255,0) 0%, #ffffff 20%, #ffffff 80%, rgba(255,255,255,0) 100%);
+        filter: blur(1px);
+        opacity: 0.05;
+      }
     }
   }
 }
 
 
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-// === Responsive Design ===
-@media screen and (max-width: 768px) {
-  
-  // Structure principale
-  .layout {
-    flex-direction: column;
+
+
+// ==========================
+// ======= ACTUALITÉS =======
+// ==========================
+.actus-section {
+  // height: auto;
+  background: linear-gradient(to right, $bleu 0%, lighten($bleu, 12%) 100%);
+  padding: 4rem 3rem 6rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.6rem;
+    color: $creme;
+    margin-bottom: 2rem;
   }
 
-  // ====== MENU ======
-  .side-menu {
-    width: 100%;
-    height: auto;
+  .actus-marquee {
+    overflow: hidden;
     position: relative;
-    overflow: visible;
+    width: 100%;
+    max-width: 100%;
+    border-top: 3px solid $vert1;
+    border-bottom: 3px solid $vert1;
+    background: white;
+    padding: 1rem 0;
+    
+    
+    // === Pause on hover ===
+    &:hover .marquee-track {
+      animation-play-state: paused;
+    }
+  }
+  
+  .marquee-track {
+    display: flex;
+    padding: 1rem 0;
+    gap: 4rem;
+    animation: scroll-left 30s linear infinite;
+    width: fit-content;
+    will-change: transform;
+  }
+
+  .actu-item {
+    white-space: nowrap;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $bleu;
+    flex-shrink: 0;
+    padding: 0 0.8rem;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: " ";
+      margin-left: 1.5rem;
+      color: $vert1;
+      font-weight: bold;
+    }
+
+    &:last-child::after {
+      content: "";
+    }
 
     &:hover {
+      color: $vert1;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Animation défilement vers la gauche
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+// ==========================
+// ========= Footer =========
+// ==========================
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $creme;
+  padding: 1.5rem 2rem;
+  z-index: 1100;
+
+  p {
+    color: #031837;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+
+    img {
       width: 100%;
+      max-width: 180px; 
+      height: auto;
+      margin: 1rem auto;
+      display: block;
     }
+  }
+}
 
-    &::before {
-      content: none;
-    }
 
-    ul {
-      opacity: 1;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem;
 
-      li a {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-        background-color: $bleu;
-        color: $creme;
-        border-radius: 20px;
-        display: inline-block;
+
+// ==========================
+// ==========================
+// ==========================
+// ==========================
+// ==========================
+// ==========================
+
+// === Responsive Design ===
+
+// ==========================
+// ==========================
+// ==========================
+// ==========================
+// ==========================
+
+@media screen and (max-width: 1024px) {
+  // === HERO SECTION ===
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin-left: 0; // supprime l'espace réservé au menu fixe desktop
+    padding: 1rem 0;
+    background: linear-gradient(to right, $bleu 0%, lighten($bleu, 12%) 100%);
+
+    .accroche {
+      flex-direction: column;
+      align-items: center;
+
+      .accroche-texte {
+        padding: 0 1rem;
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+          line-height: 2rem;
+          width: 100%;
+          max-width: 100%;
+          padding: 0;
+        }
+      }
+
+      .accroche-image {
+        margin-top: 2rem;
+        
+        img {
+          width: 90%;
+          max-width: 300px;
+          height: auto;
+          margin: 0 auto;
+          animation: slideLeftMobile 1.5s ease-out 0.2s both;
+        }
       }
     }
   }
 
-  // ====== HEADER ======
+  // Animation mobile
+  @keyframes slideLeftMobile {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  // === MENU LATÉRAL TOUJOURS VISIBLE ===
+  .side-menu {
+    width: 0px;
+    height: 0px;
+    // background-color: $bleu;
+    z-index: 1000;
+    // padding-top: 1rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0 1rem;
+
+      li {
+        list-style: none;
+
+        a {
+          display: block;
+          padding: 0.8rem 1.2rem;
+          color: $creme;
+          background-color: transparent;
+          border-radius: 8px;
+          font-weight: 600;
+          transition: background-color 0.2s;
+
+          &:hover {
+            background-color: $vert3;
+            color: $bleu;
+          }
+        }
+      }
+    }
+  }
+
+
+  // === HEADER ===
   .header {
     flex-direction: column;
     align-items: center;
@@ -495,83 +822,104 @@ a {
     }
   }
 
-  // ====== HERO ======
-  .hero-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: auto;
+  // === VIGNETTES ===
+  .vignettes-section {
     padding: 2rem 1rem;
-    background-color: $bleu;
 
-    .accroche-texte {
-      padding: 0;
-      h2 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1.1rem;
-        width: auto;
-        line-height: 2rem;
-        padding: 0 1rem;
-      }
+    .vignettes-title {
+      font-size: 2rem;
     }
 
-    .accroche-image {
-      img {
-        width: 80%;
-        max-width: 300px;
-        height: auto;
-        margin: 1rem auto;
+    .vignettes-grid {
+      gap: 1.2rem;
+    }
 
-        animation: slideLeftMobile 1.5s ease-out 0.2s both;
-      }
+    .vignette {
+      width: clamp(150px, 40vw, 240px);
+      height: 150px;
+      font-size: 1.1rem;
+      padding: 0.8rem;
+    }
+
+    .vignette:active {
+      transform: scale(0.98);
+      box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2);
     }
   }
 
-  // Animation adaptée mobile (mouvement X plus doux si nécessaire)
-  @keyframes slideLeftMobile {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
+
+  // === SIMULATEUR & EXPERT SECTIONS ===
+  .simulateur-section,
+  .expert-section {
+    .simulateur-content,
+    .expert-content {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 2rem;
+      padding: 2rem;
     }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
 
-  // ====== MAIN CONTENT ======
-  .main-content {
-    padding: 1rem;
-  }
-
-  // ====== SIMULATEUR / EXPERT ======
-  .simulateur-content,
-  .expert-content {
-    flex-direction: column;
-
-    .simulateur-image,
-    .expert-image {
-      width: 100%;
-      img {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-      }
+    .simulateur-image img,
+    .expert-image img {
+      margin: 0 auto;
+      max-width: 300px;
+      height: auto;
     }
 
     .simulateur-texte,
     .expert-texte {
-      width: 100%;
-      text-align: center;
+      padding: 0;
+
       h2 {
-        font-size: 1.4rem;
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        margin: 0 auto;
+      }
+
+      .btn {
+        margin-top: 1.5rem;
       }
     }
   }
 
-  // ====== FOOTER ======
+
+  // === ACTUALITES ===
+  .actus-section {
+    padding: 2rem 1rem 3rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .actus-marquee {
+      padding: 0.5rem 0;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+    }
+
+    .marquee-track {
+      gap: 2rem;
+      padding: 0.5rem 0;
+    }
+
+    .actu-item {
+      font-size: 1.1rem;
+      padding: 0 0.5rem;
+      white-space: nowrap;
+
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+
+  // === FOOTER ===
   .footer {
     text-align: center;
 

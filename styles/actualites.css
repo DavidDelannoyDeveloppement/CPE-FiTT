@@ -1,0 +1,74 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  display: flex;
+}
+.header h1 {
+  color: #00a250;
+  font-size: 2rem;
+}
+
+.logo-container img {
+  width: 50%;
+}
+
+.actualites-page {
+  background-color: #fffffa;
+  padding: 3rem 2rem;
+  font-family: "Poppins", sans-serif;
+}
+.actualites-page h1 {
+  font-size: 2.4rem;
+  color: #031837;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.actualites-page .article-block {
+  background-color: white;
+  border-left: 5px solid #00a250;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.actualites-page .article-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+.actualites-page .article-block h2 {
+  color: #031837;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.actualites-page .article-block .article-date {
+  font-size: 0.85rem;
+  color: #5bb887;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.actualites-page .article-block p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .actualites-page {
+    padding: 2rem 1rem;
+  }
+  .actualites-page h1 {
+    font-size: 2rem;
+  }
+  .actualites-page .article-block {
+    padding: 1.5rem;
+  }
+  .actualites-page .article-block h2 {
+    font-size: 1.3rem;
+  }
+  .actualites-page .article-block p {
+    font-size: 0.95rem;
+  }
+}/*# sourceMappingURL=actualites.css.map */

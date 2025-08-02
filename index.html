@@ -1,125 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ################## -->
-    <!-- META SEO A AJOUTER -->
-    <!-- VIGNETTE A AJOUTER -->
-    <!-- ################## -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ===================== -->
+  <!-- === META À AJOUTER === -->
+  <!-- ===================== -->
+  <!-- TODO: Ajouter meta SEO, favicon, vignette réseaux sociaux -->
 
-    <title>Contrat de Performance Énergétique - FiTT</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <title>Contrat de Performance Énergétique - FiTT</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="images/Logo-FiTT-baseline-RVB.png" alt="Logo FiTT">
+  <!-- ======================== -->
+  <!-- === HEADER PRINCIPAL === -->
+  <!-- ======================== -->
+  <header class="header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="./images/Logo-FiTT-baseline-RVB.png" alt="Logo FiTT" />
+      </a>
+    </div>
+    <div class="accroche">
+      <h1>Le CPE</h1>
+      <h2>Un levier concret pour vos économies d'énergie</h2>
+    </div>
+    <div class="cta-buttons">
+      <a href="#" class="btn">Simuler mes économies</a>
+      <a href="#" class="btn secondary">Contacter un expert</a>
+    </div>
+  </header>
+
+  <!-- ========================= -->
+  <!-- === CONTENU PRINCIPAL === -->
+  <!-- ========================= -->
+  <main class="main-content">
+
+    <!-- ====================== -->
+    <!-- === SECTION : HERO === -->
+    <!-- ====================== -->
+    <section class="hero-section">
+
+      <!-- ======== MENU ========== -->
+      <nav class="side-menu">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#definition">Le CPE</a></li>
+          <li><a href="#fonctionnement">Fonctionnement</a></li>
+          <li><a href="#resultats">Résultats & Garanties</a></li>
+          <li><a href="#aides">Aides & Subventions</a></li>
+          <li><a href="#cas-clients">Cas Clients</a></li>
+          <li><a href="#actus">Actualités FiTT</a></li>
+          <li><a href="#services">Nos Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- ======== ACCROCHE HERO ======== -->
+      <div class="accroche">
+        <div class="accroche-texte">
+          <h2>Améliorez votre performance énergétique avec un accompagnement sur-mesure</h2>
+          <p>Le Contrat de Performance Énergétique (CPE) vous garantit des économies durables, mesurées et certifiées. FiTT vous accompagne de l'étude à la mise en œuvre, avec une solution adaptée à vos besoins spécifiques.</p>
+        </div>
+        <div class="accroche-image">
+          <img src="images/Batiment-fitt.png" alt="Illustration CPE" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- === SECTION : VIGNETTES À VENIR -->
+    <!-- ================================ -->
+    <section class="vignettes-section">
+        <h2 class="vignettes-title">Parcourez nos rubriques</h2>
+        <div class="vignettes-grid">
+            <a href="/accueil" class="vignette">
+                <img src="./images/icon_1_1.png" alt="accueil-icone">
+                <p>Accueil</p>
+            </a>
+            <a href="/cpe" class="vignette">
+                <img src="./images/icon_1_2.png" alt="le-cpe-icone">
+                <p>Le CPE</p>
+            </a>
+            <a href="/simulation" class="vignette">
+                <img src="./images/icon_1_3.png" alt="simulation-icone">
+                <p>Simuler mes gains</p>
+            </a>
+            <a href="/reglementation" class="vignette">
+                <img src="./images/icon_2_1.png" alt="reglementation-icone">
+                <p>Réglementation</p>
+            </a>
+            <a href="/subventions" class="vignette">
+                <img src="./images/icon_2_2.png" alt="subventions-icone">
+                <p>Subventions</p>
+            </a>
+            <a href="/chiffres" class="vignette">
+                <img src="./images/icon_2_3.png" alt="chiffres-icone">
+                <p>Chiffres clés</p>
+            </a>
+            <a href="/lexique" class="vignette">
+                <img src="./images/icon_3_1.png" alt="lexique-icone">
+                <p>Lexique</p>
+            </a>
+            <a href="/actualites" class="vignette">
+                <img src="./images/icon_3_2.png" alt="actualites-icone">
+                <p>Actualités</p>
+            </a>
+            <a href="/contact" class="vignette">
+                <img src="./images/icon_3_3.png" alt="contact-icone">
+                <p>Contacter un expert</p>
             </a>
         </div>
-        <div class="accroche">
-            <h1>Le CPE</h1>
-            <h2>Un levier concret pour vos économies d'énergie</h2>
+    </section>
+
+    <!-- =========================== -->
+    <!-- === SECTION : SIMULATEUR === -->
+    <!-- =========================== -->
+    <section class="simulateur-section" id="simulateur">
+      <div class="simulateur-content">
+        <div class="simulateur-image">
+          <img src="images/simulateur.png" alt="Simulateur FiTT" />
         </div>
-        <div class="cta-buttons">
-            <a href="#" class="btn">Simuler mes économies</a>
-            <a href="#" class="btn secondary">Contacter un expert</a>
+        <div class="simulateur-texte">
+          <h2>Estimez vos économies d’énergie</h2>
+          <p>Notre simulateur vous permet d’obtenir en quelques clics une estimation de vos économies après travaux.</p>
+          <a href="#" class="btn">Lancer la simulation</a>
         </div>
-    </header>
+      </div>
+    </section>
 
-
-    <!-- CONTENU PRINCIPAL -->
-    <main class="main-content">
-        <!-- SECTION HERO -->
-        <section class="hero-section">
-            <!-- MENU -->
-            <nav class="side-menu">
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#definition">Le CPE</a></li>
-                    <li><a href="#fonctionnement">Fonctionnement</a></li>
-                    <li><a href="#resultats">Résultats & Garanties</a></li>
-                    <li><a href="#aides">Aides & Subventions</a></li>
-                    <li><a href="#cas-clients">Cas Clients</a></li>
-                    <li><a href="#actus">Actualités FiTT</a></li>
-                    <li><a href="#services">Nos Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-                <div class="accroche">
-                    <div class="accroche-texte">
-                        <h2>Améliorez votre performance énergétique avec un accompagnement sur-mesure</h2>
-                        <p>Le Contrat de Performance Énergétique (CPE) vous garantit des économies durables, mesurées et certifiées. FiTT vous accompagne de l'étude à la mise en œuvre, avec une solution adaptée à vos besoins spécifiques.</p>
-                    </div>
-                    <div class="accroche-image">
-                        <img src="images/Bâtiment écologique en harmonie avec la nature.png" alt="Illustration CPE">
-                    </div>
-                </div>
-        </section>
-
-        <!-- SECTION VIGNETTES -->
-        <section class="vignettes-section">
-            <!-- Les vignettes pour les différentes pages à venir -->
-        </section>
-        
-        <!-- SECTION ACTUALITÉS -->
-        <section class="actus-section" id="actus">
-            <h2>Actualités FiTT</h2>
-            <div class="actus-container">
-                <article class="actu-card">
-                    <h3>FiTT signe un nouveau CPE dans le secteur agroalimentaire</h3>
-                    <p>Notre accompagnement permettra à ce client de réduire de 32% sa consommation énergétique.</p>
-                </article>
-                <article class="actu-card">
-                    <h3>Subventions régionales : ce qui change en 2025</h3>
-                    <p>Nous faisons le point sur les nouvelles aides disponibles pour les industriels.</p>
-                </article>
+    <!-- ============================== -->
+    <!-- === SECTION : CONTACT EXPERT === -->
+    <!-- ============================== -->
+    <section class="expert-section" id="expert">
+        <div class="expert-content">
+            <div class="expert-texte">
+                <h2>Besoin d’un accompagnement sur mesure ?</h2>
+                <p>Nos experts vous répondent et vous guident dans votre projet de performance énergétique. Contactez-nous dès maintenant !</p>
+                <a href="#contact" class="btn">Contacter un expert</a>
             </div>
-        </section>
-    
-        <!-- SECTION SIMULATEUR -->
-        <section class="simulateur-section" id="simulateur">
-            <div class="simulateur-content">
-                <div class="simulateur-image">
-                    <img src="assets/simulateur.jpg" alt="Simulateur FiTT">
-                </div>
-                <div class="simulateur-texte">
-                    <h2>Estimez vos économies d’énergie</h2>
-                    <p>Notre simulateur vous permet d’obtenir en quelques clics une estimation de vos économies après travaux.</p>
-                    <a href="#" class="btn">Lancer la simulation</a>
-                </div>
-            </div>
-        </section>
-    
-        <!-- SECTION CONTACT EXPERT -->
-        <section class="expert-section" id="contact">
-            <div class="expert-content">
-                <div class="expert-texte">
-                    <h2>Besoin d’un accompagnement personnalisé ?</h2>
-                    <p>Nos experts FiTT sont disponibles pour étudier vos besoins spécifiques et vous proposer un plan d’action efficace.</p>
-                    <a href="#" class="btn secondary">Contacter un expert</a>
-                </div>
-                <div class="expert-image">
-                    <img src="assets/expert_fitt.jpg" alt="Expert FiTT">
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 FiTT Solutions – Tous droits réservés</p>
-            <div class="footer-logo">
-                <img src="assets/logo_fitt_gris.png" alt="Logo FiTT gris">
+            <div class="expert-image">
+            <img src="images/expert.png" alt="Expert FiTT" />
             </div>
         </div>
-    </footer>
+    </section>
 
+    <!-- ============================= -->
+    <!-- === SECTION : ACTUALITÉS ==== -->
+    <!-- ============================= -->
+    <section class="actus-section" id="actus">
+      <h2>Actualités FiTT</h2>
+      <div class="actus-marquee">
+        <div class="marquee-track">
+          <a href="pages/actualites.html#article-1" class="actu-item">FiTT signe un nouveau CPE dans l’agroalimentaire</a>
+          <a href="pages/actualites.html#article-2" class="actu-item">Subventions régionales : ce qui change en 2025</a>
+          <a href="pages/actualites.html#article-3" class="actu-item">FiTT recrute un chef de projet efficacité énergétique</a>
+          <a href="pages/actualites.html#article-4" class="actu-item">Webinaire : Garantir les résultats d’un CPE</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== -->
+  <!-- === FOOTER SITE ==== -->
+  <!-- ===================== -->
+  <footer class="footer">
+        <p>&copy; 2025 FiTT Solutions – Tous droits réservés</p>
+        <a href="https://www.fitt-solutions.io/">
+            <img src="images/Logo-FiTT-baseline-RVB.png" alt="Logo FiTT gris" />
+        </a>   
+  </footer>
+
+  <!-- ===================== -->
+  <!-- === SCRIPT JS === -->
+  <!-- ===================== -->
+  <script src="js/script.js"></script>
 </body>
 </html>
