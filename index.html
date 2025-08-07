@@ -17,14 +17,9 @@
   <!-- === HEADER PRINCIPAL === -->
   <!-- ======================== -->
   <header class="header">
-    <div class="logo-container">
-      <a href="index.html">
-        <img src="./images/Logo-FiTT-baseline-RVB.png" alt="Logo FiTT" />
-      </a>
-    </div>
     <div class="accroche">
-      <h1>Le CPE</h1>
-      <h2>Un levier concret pour vos économies d'énergie</h2>
+      <h1>Comprendre et réussir votre <br><span class="span-h1">Contrat de Performance Énergétique</span></h1>
+      <h2>Une ressource complète et indépendante pour tout savoir sur le CPE :<br> principes, cadre légal, outils, financement et retours d’expérience concrets.</h2>
     </div>
     <div class="cta-buttons">
       <a href="#" class="btn">Simuler mes économies</a>
@@ -36,27 +31,33 @@
   <!-- === CONTENU PRINCIPAL === -->
   <!-- ========================= -->
   <main class="main-content">
-
     <!-- ====================== -->
     <!-- === SECTION : HERO === -->
     <!-- ====================== -->
     <section class="hero-section">
-
-      <!-- ======== MENU ========== -->
-      <nav class="side-menu">
-        <ul>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#definition">Le CPE</a></li>
-          <li><a href="#fonctionnement">Fonctionnement</a></li>
-          <li><a href="#resultats">Résultats & Garanties</a></li>
-          <li><a href="#aides">Aides & Subventions</a></li>
-          <li><a href="#cas-clients">Cas Clients</a></li>
-          <li><a href="#actus">Actualités FiTT</a></li>
-          <li><a href="#services">Nos Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
+    
+    <!-- ======== MENU ========== -->
+    <div class="side-wrapper">
+      <div class="menu-trigger">
+        <img src="./images/icones/menu-icone.svg" class="menu-icone" alt="menu-icone">
+        <nav class="side-menu">
+          <ul>
+            <li><a href="/accueil">Accueil</a></li>
+            <li><a href="/cpe">Le CPE</a></li>
+            <li><a href="/fonctionnement">Fonctionnement du CPE</a></li>
+            <li><a href="/resultats">Résultats & Garanties</a></li>
+            <li><a href="/aides">Aides & Subventions</a></li>
+            <li><a href="/cas-clients">Cas Clients</a></li>
+            <li><a href="/actualites">Actualités FiTT</a></li>
+            <li><a href="/services">Nos Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/recommandations">Recommandations</a></li>
+            <li><a href="/glossaire">Glossaire</a></li>
+          </ul>
+        </nav>
+      </div> 
+    </div>
+    
       <!-- ======== ACCROCHE HERO ======== -->
       <div class="accroche">
         <div class="accroche-texte">
@@ -73,46 +74,168 @@
     <!-- === SECTION : VIGNETTES À VENIR -->
     <!-- ================================ -->
     <section class="vignettes-section">
-        <h2 class="vignettes-title">Parcourez nos rubriques</h2>
-        <div class="vignettes-grid">
-            <a href="/accueil" class="vignette">
-                <img src="./images/icon_1_1.png" alt="accueil-icone">
-                <p>Accueil</p>
-            </a>
-            <a href="/cpe" class="vignette">
-                <img src="./images/icon_1_2.png" alt="le-cpe-icone">
-                <p>Le CPE</p>
-            </a>
-            <a href="/simulation" class="vignette">
-                <img src="./images/icon_1_3.png" alt="simulation-icone">
-                <p>Simuler mes gains</p>
-            </a>
-            <a href="/reglementation" class="vignette">
-                <img src="./images/icon_2_1.png" alt="reglementation-icone">
-                <p>Réglementation</p>
-            </a>
-            <a href="/subventions" class="vignette">
-                <img src="./images/icon_2_2.png" alt="subventions-icone">
-                <p>Subventions</p>
-            </a>
-            <a href="/chiffres" class="vignette">
-                <img src="./images/icon_2_3.png" alt="chiffres-icone">
-                <p>Chiffres clés</p>
-            </a>
-            <a href="/lexique" class="vignette">
-                <img src="./images/icon_3_1.png" alt="lexique-icone">
-                <p>Lexique</p>
-            </a>
-            <a href="/actualites" class="vignette">
-                <img src="./images/icon_3_2.png" alt="actualites-icone">
-                <p>Actualités</p>
-            </a>
-            <a href="/contact" class="vignette">
-                <img src="./images/icon_3_3.png" alt="contact-icone">
-                <p>Contacter un expert</p>
-            </a>
+      <h2 class="vignettes-title">Parcourez nos rubriques</h2>
+      <div class="vignettes-grid">
+
+        <!-- 1. Accueil -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_0_0.png" alt="icone accueil">
+              <p>Accueil</p>
+            </div>
+            <div class="vignette-back">
+              <p>Revenez à l'accueil du site</p>
+              <a href="/accueil" class="btn">Voir</a>
+            </div>
+          </div>
         </div>
+
+        <!-- 2. Le CPE -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_1_0.png" alt="icone CPE">
+              <p>Le CPE</p>
+            </div>
+            <div class="vignette-back">
+              <p>Définition, objectifs et enjeux du contrat</p>
+              <a href="/cpe" class="btn">Découvrir</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Fonctionnement du CPE -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_2_0.png" alt="icone fonctionnement">
+              <p>Fonctionnement</p>
+            </div>
+            <div class="vignette-back">
+              <p>Comprendre le déroulement d’un CPE étape par étape</p>
+              <a href="/fonctionnement" class="btn">Comprendre</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Résultats & Garanties -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_3_0.png" alt="icone garanties">
+              <p>Résultats & Garanties</p>
+            </div>
+            <div class="vignette-back">
+              <p>Les engagements contractuels et les résultats mesurables</p>
+              <a href="/resultats" class="btn">Voir</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Aides & Subventions -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_4_0.png" alt="icone subventions">
+              <p>Aides & Subventions</p>
+            </div>
+            <div class="vignette-back">
+              <p>Financer votre projet grâce aux dispositifs existants</p>
+              <a href="/aides" class="btn">Découvrir</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Cas Clients -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_5_0.png" alt="icone clients">
+              <p>Cas Clients</p>
+            </div>
+            <div class="vignette-back">
+              <p>Exemples de projets réussis avec nos clients</p>
+              <a href="/cas-clients" class="btn">Explorer</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Actualités FiTT -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_6_0.png" alt="icone actus">
+              <p>Actualités FiTT</p>
+            </div>
+            <div class="vignette-back">
+              <p>Les dernières nouvelles de nos projets et de l’énergie</p>
+              <a href="/actualites" class="btn">Lire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Nos Services -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_7_0.png" alt="icone services">
+              <p>Nos Services</p>
+            </div>
+            <div class="vignette-back">
+              <p>Un accompagnement sur mesure à chaque étape</p>
+              <a href="/services" class="btn">Découvrir</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Contact -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_8_0.png" alt="icone contact">
+              <p>Contact</p>
+            </div>
+            <div class="vignette-back">
+              <p>Contactez nos experts pour démarrer votre projet</p>
+              <a href="/contact" class="btn">Échanger</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Astuces & Recommandations -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_9_0.png" alt="icone astuces">
+              <p>Astuces & Conseils</p>
+            </div>
+            <div class="vignette-back">
+              <p>Nos recommandations pour réussir votre CPE</p>
+              <a href="/astuces" class="btn">Lire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Glossaire -->
+        <div class="vignette-flip">
+          <div class="vignette-inner">
+            <div class="vignette-front">
+              <img src="./images/icones/icon_10_0.png" alt="icone glossaire">
+              <p>Glossaire</p>
+            </div>
+            <div class="vignette-back">
+              <p>Comprendre les termes techniques liés au CPE</p>
+              <a href="/glossaire" class="btn">Consulter</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
+
+
+
 
     <!-- =========================== -->
     <!-- === SECTION : SIMULATEUR === -->
@@ -166,12 +289,12 @@
   <!-- ===================== -->
   <!-- === FOOTER SITE ==== -->
   <!-- ===================== -->
-  <footer class="footer">
+  <!-- <footer class="footer">
         <p>&copy; 2025 FiTT Solutions – Tous droits réservés</p>
         <a href="https://www.fitt-solutions.io/">
             <img src="images/Logo-FiTT-baseline-RVB.png" alt="Logo FiTT gris" />
         </a>   
-  </footer>
+  </footer> -->
 
   <!-- ===================== -->
   <!-- === SCRIPT JS === -->
