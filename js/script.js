@@ -13,48 +13,44 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Scroll menu
+// Effet menu
 document.addEventListener("DOMContentLoaded", () => {
+  const trigger = document.querySelector(".menu-trigger");
   const wrapper = document.querySelector(".side-wrapper");
-  if (!wrapper) return;
+  if (!trigger || !wrapper) return;
 
-  let currentTop = -100;
-  const targetTopInitial = 230;
-  const offset = 230;
-  const introSpeed = 0.025;
-  const scrollSpeed = 0.050;
-  const minTop = 30; // hauteur
+  const bounceZoomShadow = [
+    { transform: "translateY(0) scale(1)", filter: "drop-shadow(0 2px 5px rgba(0,0,0,0.2))" },
+    { transform: "translateY(-8px) scale(1.1)", filter: "drop-shadow(0 6px 10px rgba(0,0,0,0.25))" },
+    { transform: "translateY(0) scale(1)", filter: "drop-shadow(0 2px 5px rgba(0,0,0,0.2))" },
+    { transform: "translateY(-4px) scale(1.05)", filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.22))" },
+    { transform: "translateY(0) scale(1)", filter: "drop-shadow(0 2px 5px rgba(0,0,0,0.2))" }
+  ];
 
-  let phase = "intro";
+  const bounceOptions = { duration: 900, easing: "ease-in-out" };
 
-  function animate() {
-    const scrollY = window.scrollY;
-
-    if (phase === "intro") {
-      const delta = targetTopInitial - currentTop;
-      currentTop += delta * introSpeed;
-
-      if (Math.abs(delta) < 0.5) {
-        currentTop = targetTopInitial;
-        phase = "scroll";
-      }
-
-    } else if (phase === "scroll") {
-      // La position cible descend avec le scroll, mais reste ≥ minTop
-      const targetTop = Math.max(minTop, offset - scrollY);
-      const delta = targetTop - currentTop;
-
-      currentTop += delta * scrollSpeed;
-
-      if (Math.abs(delta) < 0.5) {
-        currentTop = targetTop;
-      }
+  setInterval(() => {
+    // Ne pas lancer l’animation si le menu est ouvert
+    if (!wrapper.matches(":hover")) {
+      trigger.animate(bounceZoomShadow, bounceOptions);
     }
-
-    wrapper.style.top = `${currentTop}px`;
-    requestAnimationFrame(animate);
-  }
-
-  animate();
+  }, 3000);
 });
+
+
+// clic pour mobile
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".vignette-card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
+  });
+});
+
+
+
+
+
 
